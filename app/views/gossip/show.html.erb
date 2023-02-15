@@ -1,0 +1,16 @@
+<h2> Voici le gossip n<%= @gossip.id %> </h2>
+<p><%= @gossip.user.first_name%> </p>
+<p><%= @gossip.user.last_name%></p>
+<p><%= @gossip.title%></p>
+<p><%= @gossip.content%></p>
+
+
+<p>
+    <a href="<%= edit_gossip_path %>" class="btn btn-primary">Modifier votre Gossip</a>
+</p>
+
+
+<p>
+    <a href="<%= root_path %>" class="btn btn-primary">Revenir aux articles</a>
+</p>
+

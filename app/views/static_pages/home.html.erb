@@ -1,0 +1,13 @@
+<h1>Bienvenue sur The Gossip Project!</h1>
+
+<h2> Voici les gossips:</h2>
+
+<p>Crée ton propre Gossip: <a href="<%= new_gossip_path %>" class="btn btn-primary">Créer un article</a></p>
+<table class="table">
+  <% @gossip.each do |gossip| %>
+    <tr>
+      <td class="text-left"><%= link_to gossip.user.first_name, "/user/#{gossip.user.id}" %></td>
+      <td class="text-center"><%= link_to gossip.title, "/gossip/#{gossip.id}" %></td>
+    </tr>
+  <% end %>
+</table>
