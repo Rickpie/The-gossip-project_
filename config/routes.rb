@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :gossip
   resources :user
   resources :city
+  resources :sessions, only: [:new, :create, :destroy]
+  post 'user/new'
+  
   #get 'static_pages/contact'
   #get 'static_pages/team'
   get 'contact', to: 'static_pages#contact'

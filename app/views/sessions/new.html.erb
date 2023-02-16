@@ -1,0 +1,17 @@
+ <%= form_with(scope: :session, url: sessions_path, local: true) do |f|%>
+ <div class='form-group mb-4'>
+   <%= f.email_field :email, class: 'form-control rounded-pill',
+    autofocus: true, placeholder: 'Email', required: true %>
+ </div>
+
+ <div class='input-group mb-4'>
+   <%= f.password_field :password, class:'form-control rounded-pill', 
+              autocomplete: false, placeholder: 'Password', 
+              required: true, minlength: 6%>
+ </div>
+ <div class="form-check ml-1 mb-4">
+    <%= check_box_tag :remember_me, 1, params[:remember_me], class: 'form-check-input'%>
+    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+  </div>
+ <%= f.submit 'LOGIN', class:'btn btn-primary form-control rounded-pill' %>
+ <% end %>
